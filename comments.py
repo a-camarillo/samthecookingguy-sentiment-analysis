@@ -54,7 +54,7 @@ data_dict.update({'video_Id':[f'{video_Id}']})
 data_dict.update({'comment_author':comment_author})
 data_dict.update({'user_id':comment_id})
 data_dict.update({'comment_text':comment_text})
-data_dict.update({'comment_time':comment_time})
+data_dict.update({'comment_datetime':comment_time})
 
 with open('pastrami_sandwich.json','w') as file:
     json.dump(data_dict, file)

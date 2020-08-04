@@ -38,4 +38,6 @@ store_video_details(videos)
 data_dict.update({'video_id':video_ids})
 data_dict.update({'video_title':video_title})
 data_dict.update({'published':published_at})
-print(data_dict)
+
+with open('video_info.json','w') as f:
+    json.dump(data_dict, f)
