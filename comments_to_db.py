@@ -3,11 +3,11 @@ import pandas as pd
 import datetime
 import pyodbc
 
-with open('pastrami_sandwich.json','r') as f:
+with open('json_data/bourbon_chicken.json','r') as f:
     data = json.load(f)
 
 df = pd.DataFrame({key:pd.Series(value) for key,value in data.items()})
-df['video_Id'] = 'R5MDtcS1VAU'
+df['video_Id'] = 'bofQbiUPKXA'
 df['comment_datetime'] = pd.to_datetime(df['comment_time'])
 df['comment_year'] = df['comment_datetime'].dt.year
 df['comment_month'] = df['comment_datetime'].dt.month

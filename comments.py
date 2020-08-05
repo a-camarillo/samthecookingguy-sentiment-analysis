@@ -6,7 +6,7 @@ import json
 api_service_name = "youtube"
 api_version = "v3"
 DEVELOPER_KEY = os.environ['GOOGLE_API']
-video_Id = 'R5MDtcS1VAU'
+video_Id = 'bofQbiUPKXA'
 #create the youtube api object
 youtube = googleapiclient.discovery.build(
     api_service_name, api_version, developerKey=DEVELOPER_KEY)
@@ -54,8 +54,8 @@ data_dict.update({'video_Id':[f'{video_Id}']})
 data_dict.update({'comment_author':comment_author})
 data_dict.update({'user_id':comment_id})
 data_dict.update({'comment_text':comment_text})
-data_dict.update({'comment_datetime':comment_time})
+data_dict.update({'comment_time':comment_time})
 
-with open('pastrami_sandwich.json','w') as file:
+with open('json_data/bourbon_chicken.json','w') as file:
     json.dump(data_dict, file)
 

@@ -3,7 +3,7 @@ import pandas as pd
 import datetime
 import pyodbc
 
-with open('video_info.json','r') as f:
+with open('json_data/video_info.json','r') as f:
     data = json.load(f)
 
 df = pd.DataFrame({key:pd.Series(value) for key,value in data.items()})

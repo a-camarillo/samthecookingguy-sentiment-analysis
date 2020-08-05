@@ -32,12 +32,12 @@ video_title = []
 published_at = []
 data_dict = {}
 
-videos = get_video_details(['5h974fXFFHE','4tc4L85OyWQ','R5MDtcS1VAU'])
+videos = get_video_details(['bofQbiUPKXA'])
 store_video_details(videos)
 
 data_dict.update({'video_id':video_ids})
 data_dict.update({'video_title':video_title})
 data_dict.update({'published':published_at})
 
-with open('video_info.json','w') as f:
+with open('json_data/video_info.json','w') as f:
     json.dump(data_dict, f)
